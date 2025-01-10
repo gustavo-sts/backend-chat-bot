@@ -34,7 +34,7 @@ app.post("/api/generate-content", async (req, res) => {
       },
       contents: {
         parts: {
-          text: `Contexto da conversa: ${safeHistory}\nPergunta ou mensagem: ${text}`,
+          text: `Contexto da conversa: ${history}\nPergunta ou mensagem: ${text}`,
         },
       },
     };
