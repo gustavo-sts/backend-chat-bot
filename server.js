@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 
 // Nome do chatbot (em português)
-const chatbotName = "Luma";
+const chatbotName = "Orya";
 
 // Rota para consumir a API Gemini
 app.post("/api/generate-content", async (req, res) => {
@@ -29,7 +29,7 @@ app.post("/api/generate-content", async (req, res) => {
     const requestBody = {
       system_instruction: {
         parts: {
-          text: `Seu nome é Luma. Por favor, forneça suas respostas utilizando tags HTML que simulem o formato do Markdown. Para negrito, use a tag <strong>. Para itálico, use a tag <em>. Para um cabeçalho de nível 1, utilize a tag <h1>. Para criar listas, utilize as tags <ul> para listas não ordenadas e <ol> para listas ordenadas, com itens dentro das tags <li>. Para links, utilize a tag <a href="URL">texto do link</a>. A ideia é que a estrutura da resposta seja clara, com as tags HTML mimetizando o estilo do Markdown, mantendo a formatação simples e legível. Evite ser repetitivo nas saudações e sempre leve em consideração o contexto da conversa.`,
+          text: `Seu nome é Orya. Por favor, forneça suas respostas utilizando tags HTML que simulem o formato do Markdown. Para negrito, use a tag <strong>. Para itálico, use a tag <em>. Para um cabeçalho de nível 1, utilize a tag <h1>. Para criar listas, utilize as tags <ul> para listas não ordenadas e <ol> para listas ordenadas, com itens dentro das tags <li>. Para links, utilize a tag <a href="URL">texto do link</a>. A ideia é que a estrutura da resposta seja clara, com as tags HTML mimetizando o estilo do Markdown, mantendo a formatação simples e legível. Evite ser repetitivo nas saudações e sempre leve em consideração o contexto da conversa.`,
         },
       },
       contents: {
